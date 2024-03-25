@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lux Flowers</title>
+    <link ref="stylesheets" href="index.html">
+    
+</head>
+<body>
+    <style>
+        /*styling done by Blaine. html done by Asisipho*/
+        
+        h1 {
+            font-family: cursive;
+        }
+        h1 {
+            text-align: center;
+        }
+        h1 {
+            font-size: 170px;
+        }
+        h1 {color: ghostwhite;
+        }
+        h2 {
+            font-family: cursive;
+        }
+        h2 {
+            font-size: 44px;
+        }
+        ul {font-size: 24px;
+        }
+        img {
+            width: 350px;
+        }
+        img {
+            height: 350px;
+        }
+        p {font-family: cursive;
+        }
+        p {font-size: 24px;
+        }
+        ul {
+            font-family: cursive;
+        }
+        h3 {font-size: 35px;
+        }
+        h3 {
+            font-family: cursive;
+
+            
+        }
+        .search-bar {
+            text-align: right;
+            width: 350px;
+        }
+
+        .search-bar input[type="search"]{
+            width: 350px;
+        }
+        
+
+        body {
+            background-position: center center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            background-repeat: no-repeat;
+            /* Adding this for the scrolling of the the footer component. */
+            .show-footer & {
+                padding-bottom: 6rem;
+            }
+        }
+
+        #home {
+            font-family: 'Brush Script', cursive;
+            background-image: url(images/home.jpg);
+            background-color: white;
+            background-size: cover;
+            background-position: center center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        #services {
+            background-image: url(images/roses2.png);
+            background-color: white;
+            background-size: cover;
+            background-position: center center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        @font-face {
+            font-family: 'Brush Script', cursive;
+            font-style: normal;
+            font-weight: 400;
+            src: local(Brush Script), url(fonts/BrushScriptOpti-Regular.woff2) format('woff2');
+        }
+
+
+        .footer {
+            background-color: hsl(210, 10%, 10%);
+            color: white;
+            padding: 0.5rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 16px;
+            box-sizing: border-box;
+        }
+
+        #search {
+            border: 1px;
+            border-radius: 4px;
+            padding: 8px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .search-button {
+            background-color: black;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .search-button:hover {
+            background-color: gray;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            height: 50px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        nav ul li {
+            float: none;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        nav .search-container {
+            display: flex;
+            align-items: center;
+            margin-left: auto !important;
+        }
+
+        nav .search-container input[type="text"] {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 8px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        nav .search-button {
+            background-color: black;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 1rem;
+        }
+
+        nav .search-container button:hover {
+            background-color: grey;
+        }
+
+
+        h3 {
+        color: hsl(0, 100%, 40%);
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 0;
+        padding: 1rem;
+        text-align: center;
+        }
+
+        #contact-form {
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: 25rem;
+        padding: 1rem;
+        /* add this rule*/
+        margin-left: auto;
+        margin-right: 0;
+        }
+
+        #contact-form label {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        }
+
+        #contact-form input,
+        #contact-form textarea {
+        border-radius: 5px;
+        border: 1px solid hsl(0, 100%, 80%);
+        display: block;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        width: 100%;
+        }
+
+        #contact-form input[type="submit"] {
+        background-color: hsl(0, 100%, 40%);
+        border-color: transparent;
+        border-radius: 5px;
+
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -1rem;
+        }
+
+        .photo {
+            flex: 1 0 300px;
+            margin: 1rem;
+            position: relative;
+        }
+
+        .photo-container {
+            position: relative;
+            width: 350px;
+            height: 350px;
+            margin: 1rem;
+        }
+
+        .header {
+            top: auto;
+            right: 0;
+            bottom: 0;
+            left: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: hsl(0, 100%, 80%);
+            color: hsl(210, 10%, 20%);
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .h7 {
+            left: 1rem;
+            z-index: 2;
+        }
+
+        .h8 {
+            left: 1rem;
+            z-index: 2;
+        }
+
+        .h9 {
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+
+        .photo h7,
+        .photo h8,
+        .photo h9 {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: hsl(0, 100%, 80%);
+            color: hsl(210, 10%, 20%);
+            border-radius: 5px;
+        }
+
+
+
+        .photo img {
+            width: 100%;
+            height: auto;
+            position: relative;
+            z-index: 1;
+            }
+
+        .photo h9 {
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: hsl(0, 100%, 80%);
+            color: hsl(210, 10%, 20%);
+            border-radius: 5px;
+        }
+
+            @media screen and (max-width: 768px) {
+            .photo-container {
+                width: 100%;
+            }
+
+            .photo {
+                margin: 1rem 0;
+            }
+
+            .photo h7,
+            .photo h8,
+            .photo h9 {
+                top: 0;
+                left: 0;
+                right: 0;
+                text-align: center;
+                z-index: 2;
+            }
+            }
+
+
+ 
+</style>
+
+    </style>
+    </body>
+    <header>
+        <section id="home">
+            <h1>Lux Flowers</h1>
+        </section>
+         
+        <div class="search-container">
+        
+        </div>
+        
+        <div class="topnav">
+            <nav>
+                
+                <ul>
+                    <li><a href="#home">Home<a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="contact">Contact</a></li>
+                        
+                </ul>
+                
+                <li class="search-container">
+                    <input type="search" id="search" name="search" placeholder="Search...">
+                    <button class="search-button">Search</button>
+                </li>
+            </nav>
+            
+        </div>
+        
+    </header>
+    <main>
+        <section id="featured">
+            <h2>Featured Flower Arrangements</h2>
+            <div class="flower-grid">
+                <img src="https://ramafloraldesign.com/cdn/shop/files/14192eaf-a303-4b43-bf26-3d5580973ed5_aae98fda-c169-40b3-899d-93c0903a1bbe.jpg?v=1689089521"alt=""srcset="">
+                <img src="https://upscaleandposh.com/cdn/shop/products/red-roses-arrangement-in-a-medium-luxury-round-box-upscale-and-posh-779222_2048x.jpg?v=1610630615"alt=""srcset="">
+                <img src="https://www.weddingstylemagazine.com/wp-content/uploads/2022/06/RONI-FLORAL-DESIGN..2.jpg"alt=""srcset="">  
+                
+    
+
+             </div>
+
+             
+
+        </section>  
+        <section id="specials">
+            <h2>Special Offers</h2>
+            <p>Check out our special offers on beautiful flower arrangements!</p>
+            <div class="special offers">
+              <div class="offer">
+                    <img src="https://i.pinimg.com/736x/6d/87/90/6d8790efdb67434c6a8c866e6555abed.jpg" alt=""srcset="">
+                    <img src="images/pinkBouquet.jpg">
+                    <img src="images/BlueRoses.jpg">
+                    <h3>Birthday Bouquets</h3>
+                    <p>Indulge in the essence of spring with our elegant Birtday Bouquet. Well crafted in the finest bloom, this bouquet will captivate your senses.</p>
+                    <p class="price">R2820.00</p>
+              </div>
+                <div class="offer">
+                    <img src="https://i.pinimg.com/originals/04/ca/b5/04cab569f9b832aa7a2bc62948437663.jpg" alt="" srcset="">
+        
+                    <img src="images/whiteWeddingFlowers.jpg">
+                    <img src="images/whiteLillies.jpg">
+
+                    
+
+
+                    <h3>Classic White Orchards & Romantic Bouquets</h3>
+                    <p class="price">R3950.00</p>
+                </div>  
+            </div>          
+        </section> 
+        <section id="services">
+            <h2>Our Services</h2>
+            
+            <div class="gallery">
+                <div class="photo-container">
+                    <h7 class="header h7">Wedding Flowers</h7>
+                    <div class="photo">
+                        <img src="images/whiteWeddingFlowers.jpg" alt="White Wedding Flowers">
+                    </div>
+        
+                </div>
+                <div class="photo-container">
+                    <h8 class="header h8">Bouquets</h8>
+                    <div class="photo">
+                        <img src="images/peachBouquets.jpg" alt="Peach Bouquets">
+                    </div>
+                    
+                </div>
+                <div class="photo-container">
+                    <h9 class="header h9">Gift Busket</h9>
+                    <div class="photo">
+                        <img src="images/giftBasket.jpg" alt="Gift Basket">
+                    </div>
+                    
+                </div>
+                
+
+            
+        </section>
+        <section id="contact">
+            <h3>Contact Us</h3>
+            <p>
+            If you have any questions or would like to get in touch, please fill out the form below.
+            </p>
+            <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" cols="30" required></textarea>
+            <br>
+            <input type="submit" value="Send">
+            </form>
+            <p>
+            You can also reach us by phone at +27 60 992 5056 or by email at <a href="mailto:info@luxflowers.com">blainedc.com</a>.
+            </p>
+            <div id="response"></div>
+                <!-- Google Map Copied Code -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.546766172227!2d28.039165573936074!3d-26.146316961616172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c8d37b50aaf%3A0x14ea91e5828c79e9!2sRosebank%20Mall!5e0!3m2!1sen!2sza!4v1710840196301!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div> 
+        </section>
+    </main>
+    <div class="footer">
+        <p> Copyright &copy; 2024 Lux Flower Shop. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a>
+        </p>
+    </div>
+        
+
+    </footer>
+
+    <script>
+        const body = document.body;
+        constfooter = document.querySelector('footer');
+
+        function handleScroll() {
+            if (window.scrollY + windown.innerHeight == document.body.offsetHeight) {
+                body.classList.remove('show-footer');
+            } else {
+                body.classList.remove('show-footer');
+                footer.classList.add('hide-footer');
+            }
+        }
+
+        //Add the event listener
+        window.addEventListener('scroll', handleScroll);
+
+        // Call this function once to initialize the state.
+        handleScroll();
+
+    </script>
+
+
+</body>
+</html>
